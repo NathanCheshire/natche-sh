@@ -1,5 +1,8 @@
 enum CloudflareHeader {
   IpCountry = "cf-ipcountry",
+  CfConnectingIp = "cf-connecting-ip",
+  Referer = "referer",
+  UserAgent = "user-agent",
 }
 
 enum ResponseCode {
@@ -16,8 +19,23 @@ export default {
     const requestCountry = request.headers.get(CloudflareHeader.IpCountry);
 
     if (!requestCountry || !allowedCountries.includes(requestCountry)) {
-      // ToDo: log that we're blocking this request because its from some country
-      // and also log out other details of the request
+      const url = new URL(request.url);
+      console.log(
+        JSON.stringify({
+          level: "warn",
+          message: "Blocked request from disallowed country",
+          country: requestCountry || "unknown",
+          allowedCountries,
+          method: request.method,
+          path: url.pathname,
+          query: url.search,
+          userAgent: request.headers.get(CloudflareHeader.UserAgent),
+          referer: request.headers.get(CloudflareHeader.Referer),
+          ip: request.headers.get(CloudflareHeader.CfConnectingIp),
+          timestamp: new Date().toISOString(),
+        })
+      );
+
       return new Response("Forbidden", { status: ResponseCode.Forbidden });
     }
 
