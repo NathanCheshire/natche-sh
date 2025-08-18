@@ -1,9 +1,0 @@
-{
-  "name": "ui-proxy",
-  "compatibility_date": "2025-08-18",
-  "main": "src/index.ts",
-  "vars": {
-    "PAGES_PROJECT_ID": "natche-sh",
-    "ALLOWED_COUNTRIES": "US,CA,GB,AU,DE,FR,NL,SE,NO,DK"
-  }
-}

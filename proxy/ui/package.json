@@ -1,7 +1,0 @@
-{
-  "name": "ui",
-  "packageManager": "yarn@4.6.0",
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250816.0"
-  }
-}
