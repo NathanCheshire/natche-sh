@@ -1,5 +1,5 @@
 {
-  "name": "ui-proxy",
+  "name": "natch-sh-ui-proxy",
   "compatibility_date": "2025-08-18",
   "main": "src/index.ts",
   "vars": {
