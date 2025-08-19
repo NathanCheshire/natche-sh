@@ -15,16 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "18"
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install deps
+        run: |
+          cd proxy/ui
+          yarn install --frozen-lockfile
 
       - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          workingDirectory: "./proxy/ui"
+        run: |
+          cd proxy/ui
+          npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
