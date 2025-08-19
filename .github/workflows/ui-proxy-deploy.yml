@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - "proxy/ui/**"
-      - ".github/ui-proxy-deploy.yml"
+      - ".github/workflows/ui-proxy-deploy.yml"
 
 jobs:
   deploy:
