@@ -1,0 +1,14 @@
+version: "3"
+
+tasks:
+  tail:
+    desc: Tail worker logs
+    cmd: npx wrangler tail
+
+  deploy:
+    desc: Deploy
+    cmd: npx wrangler deploy
+
+  types:
+    desc: Generate types
+    cmd: npx wrangler types
