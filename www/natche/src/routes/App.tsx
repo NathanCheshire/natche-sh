@@ -22,7 +22,7 @@ export default function App() {
           fontFamily: "Kanit",
           fontWeight: 700,
           color: "#0f0f0f",
-          fontSize: "3.5rem",
+          fontSize: "3.2rem",
         }}
       >
         Natche
@@ -30,7 +30,7 @@ export default function App() {
       <Typography
         sx={{
           fontFamily: "Inter",
-          fontWeight: 500,
+          fontWeight: 400,
           color: "#505050",
           fontSize: "0.9rem",
         }}
