@@ -32,7 +32,8 @@ export default function App() {
           fontSize: "0.9rem",
         }}
       >
-        Website in progress, check back soon!
+        Website in progress, check back soon! Need something immediately? You
+        can reach me at nate@natche.sh
       </Typography>
     </Box>
   );
