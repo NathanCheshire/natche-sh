@@ -14,6 +14,7 @@ export default function App() {
         height: "100vh",
         gap: "16px",
         backgroundColor: "white",
+        maxWidth: "90%",
       }}
     >
       <FontLoader />
@@ -33,6 +34,7 @@ export default function App() {
           fontWeight: 400,
           color: "#505050",
           fontSize: "0.9rem",
+          textAlign: "center",
         }}
       >
         Website in progress, check back soon! Need something immediately? You
