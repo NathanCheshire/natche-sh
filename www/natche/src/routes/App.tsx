@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { EmailAddress } from "../shared/emails";
 
 export default function App() {
   return (
@@ -33,7 +34,7 @@ export default function App() {
         }}
       >
         Website in progress, check back soon! Need something immediately? You
-        can reach me at nate@natche.sh
+        can reach me at {EmailAddress.Nate}.
       </Typography>
     </Box>
   );
