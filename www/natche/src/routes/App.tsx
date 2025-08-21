@@ -1,7 +1,11 @@
 import { Box, Typography } from "@mui/material";
+import { useEffect } from "react";
 import { EmailAddress } from "../shared/emails";
+import reloadFonts from "../shared/fonts";
 
 export default function App() {
+  useEffect(() => reloadFonts(), []);
+
   return (
     <Box
       sx={{
