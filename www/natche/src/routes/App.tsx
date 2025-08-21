@@ -14,7 +14,7 @@ export default function App() {
         height: "100vh",
         gap: "16px",
         backgroundColor: "white",
-        maxWidth: "90%",
+        maxWidth: "80%",
       }}
     >
       <FontLoader />
@@ -24,6 +24,8 @@ export default function App() {
           fontWeight: 700,
           color: "#0f0f0f",
           fontSize: "3.2rem",
+          textAlign: "start",
+          width: "100%",
         }}
       >
         Natche
@@ -34,7 +36,8 @@ export default function App() {
           fontWeight: 400,
           color: "#505050",
           fontSize: "0.9rem",
-          textAlign: "center",
+          textAlign: "start",
+          width: "100%",
         }}
       >
         Website in progress, check back soon! Need something immediately? You
